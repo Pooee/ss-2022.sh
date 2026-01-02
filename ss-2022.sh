@@ -249,7 +249,7 @@ version_compare() {
 download_ss() {
     local version=$1
     local arch=$2
-    local url="https://github.com/shadowsocks/shadowsocks-rust/releases/download/v${version}"
+    local url="https://ghproxy.net/https://github.com/shadowsocks/shadowsocks-rust/releases/download/v${version}"
     local filename=""
 
     case "${arch}" in
