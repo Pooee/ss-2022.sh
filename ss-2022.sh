@@ -150,8 +150,7 @@ check_service_status() {
 
 # 获取最新版本
 get_latest_version() {
-    SS_VERSION=$(wget -qO- https://api.github.com/repos/shadowsocks/shadowsocks-rust/releases | \
-                 jq -r '[.[] | select(.prerelease == false) | select(.draft == false) | .tag_name] | .[0]')
+    SS_VERSION="1.24.0"
     
     if [[ -z ${SS_VERSION} ]]; then
         error_exit "获取 Shadowsocks Rust 最新版本失败！"
@@ -185,8 +184,7 @@ check_status() {
 }
 
 check_new_ver() {
-    new_ver=$(wget -qO- https://api.github.com/repos/shadowsocks/shadowsocks-rust/releases| jq -r '[.[] | select(.prerelease == false) | select(.draft == false) | .tag_name] | .[0]')
-    [[ -z ${new_ver} ]] && echo -e "${Error} Shadowsocks Rust 最新版本获取失败！" && exit 1
+    new_ver=""v1.24.0"
     echo -e "${Info} 检测到 Shadowsocks Rust 最新版本为 [ ${new_ver} ]"
 }
 
