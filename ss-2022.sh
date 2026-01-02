@@ -184,7 +184,7 @@ check_status() {
 }
 
 check_new_ver() {
-    new_ver=""v1.24.0"
+    new_ver="v1.24.0"
     echo -e "${Info} 检测到 Shadowsocks Rust 最新版本为 [ ${new_ver} ]"
 }
 
